@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
-import { env } from '../../environments/environment';
+import { environment as env } from '../../../environments/environment';
 import { GameServiceService } from '../../services/game-service.service';
 import { EventEmitter, Output } from '@angular//core';
 
