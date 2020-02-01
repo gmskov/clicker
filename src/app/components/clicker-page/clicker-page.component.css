@@ -1,0 +1,60 @@
+.clicker-layout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  overflow: auto;
+}
+
+@media (max-width: 768px)  {
+  .clicker-layout{
+    padding: 0;
+  }
+}
+
+.clicker-layout__btn {
+  background-color: #4CAF50;
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  cursor: pointer;
+  font-size: 40pt;
+  transition: border-radius 1s;
+}
+
+.clicker-layout__danger{
+  background-color: #ff0000;
+}
+
+.clicker-layout__timer-danger {
+  color: #ff0000 !important;
+}
+
+.clicker-layout__timer {
+  position: relative;
+  display: block;
+  font-size: 50px;
+  color: #0277BD;
+}
+
+.clicker-layout__timer-start{
+  color: green;
+}
+
+@media (max-width: 768px)  {
+  .container {
+    width: 100%;
+  }
+
+  .clicker-layout__btn {
+    border-radius: 0;
+    transition: border-radius 1s;
+    min-height: calc(100vh - 100px);
+    width: 100%
+  }
+}

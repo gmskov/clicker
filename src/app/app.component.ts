@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'clicker';
+  stage:string = 'start';
+
+  changeStage(stage: string){
+    this.stage = stage;
+  }
 }

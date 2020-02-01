@@ -1,0 +1,15 @@
+.container {
+  text-align: center;
+}
+.card-action button{
+  margin: 0 20px;
+}
+@media (max-width: 768px)  {
+  .card-action {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-action button{
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,18 @@
+<li class="collection-item" *ngIf="!rankListItem.results">
+  <div>
+    Date: <b>{{ rankListItem.date }}</b>
+  </div>
+  <div>
+    Score: <b>{{ rankListItem.score }}</b>
+  </div>
+</li>
+<li class="collection-item"
+    *ngIf="rankListItem.results"
+    [ngClass]="{'active': rankListItem.active }">
+  <div >
+    Name: <b>{{ rankListItem.name }}</b>
+  </div>
+  <div>
+    Score: <b>{{ rankListItem.score }}</b>
+  </div>
+</li>

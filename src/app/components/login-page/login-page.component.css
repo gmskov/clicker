@@ -1,0 +1,22 @@
+.container {
+  text-align: center;
+}
+.card-content__input {
+  margin-bottom: 30px;
+}
+.card-content__input input {
+  width: 50%;
+  text-align: center;
+  color: #ffffff;
+}
+.card-content__input .is-invalid {
+  border-color: #dc3545;
+}
+.card-content__input .required-message {
+  display: none;
+  font-size: 9pt;
+  color: #ff7f50;
+}
+.active {
+  display: block !important;
+}

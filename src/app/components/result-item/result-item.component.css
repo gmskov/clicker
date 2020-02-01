@@ -1,0 +1,9 @@
+.collection-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.active {
+  background-color: #7fffd4;
+}

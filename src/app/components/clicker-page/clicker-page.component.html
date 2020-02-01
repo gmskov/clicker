@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m12 clicker-layout" *ngIf="!play">
+      <div class="clicker-layout__timer">
+        {{timer}}
+      </div>
+      <button class="clicker-layout__btn" (click)="startGame()">
+        Start game
+      </button>
+    </div>
+    <div class="col s12 m12 clicker-layout" *ngIf="play">
+      <div class="clicker-layout__timer" [ngClass]="{'clicker-layout__timer-danger': play}">
+        {{timer}}
+      </div>
+        <button class="clicker-layout__btn clicker-layout__danger" (click)="onClick()">
+          Click
+        </button>
+    </div>
+  </div>
+</div>
