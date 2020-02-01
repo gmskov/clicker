@@ -8,6 +8,7 @@ To install Clicker, browse to a suitable folder (we use C:\clicker\ in this exam
 `git clone https://github.com/gmskov/clicker.git` </br>
 `cd clicker`</br>
 `npm install`</br>
-`npm serve`
+`npm serve`</br>
+`http://localhost:4200/`
 
 
