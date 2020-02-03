@@ -12,7 +12,7 @@ branches:
 
 deploy:
   provider: heroku
-  app: <app_name_in_heroku>
+  app: ant-clicker
   api_key:
     secure: "be53a080-5554-43ba-b348-a34124b8f46a"
 
