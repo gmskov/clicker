@@ -1,5 +1,3 @@
 <div>
-    <app-login-page *ngIf="stage === 'start'" (stageFinish) = changeStage($event)></app-login-page>
-    <app-clicker-page *ngIf="stage === 'game'" (stageFinish) = changeStage($event)></app-clicker-page>
-    <app-result-page *ngIf="stage === 'finish'" (stageFinish) = changeStage($event)></app-result-page>
+    <router-outlet></router-outlet>
 </div>

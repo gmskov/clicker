@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameServiceService } from '../../services/game-service.service'
 import { EventEmitter, Output } from '@angular//core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-result-page',
@@ -17,13 +18,8 @@ export class ResultPageComponent implements OnInit {
   usersRankList: Array<any>;
   localStorageResults;
 
-  constructor(private gs: GameServiceService) {
-    this.userName = this.gs.getName();
-    this.score = this.gs.getScore();
-    this.showMessage();
-    this.localStorageResults = this.gs.getResultFromStorage();
+  constructor(private gs: GameServiceService, private router: Router) {}
 
-  }
   @Output() stageFinish = new EventEmitter();
 
 
@@ -52,10 +48,10 @@ export class ResultPageComponent implements OnInit {
   }
 
   playAgainClick(): void{
-    this.stageFinish.emit('game');
+    this.router.navigate(['play']);
   }
   exit(): void{
-    this.stageFinish.emit('start');
+    this.router.navigate(['login']);
   }
 
   initRankList(){
@@ -78,6 +74,11 @@ export class ResultPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.userName = this.gs.getName();
+    this.score = this.gs.getScore();
+    this.showMessage();
+    this.localStorageResults = this.gs.getResultFromStorage();
+    this.showUsersRating();
   }
 
 }

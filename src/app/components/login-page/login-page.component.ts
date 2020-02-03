@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { EventEmitter, Output } from '@angular//core';
-import { GameServiceService } from '../../services/game-service.service'
+import { GameServiceService } from '../../services/game-service.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login-page',
@@ -10,7 +12,7 @@ import { GameServiceService } from '../../services/game-service.service'
 export class LoginPageComponent implements OnInit {
   valid = true;
   name;
-  constructor(private gs: GameServiceService) {}
+  constructor(private gs: GameServiceService, private router: Router) {}
   @Output() stageFinish = new EventEmitter();
   onClick(name:string){
     if(!name){
@@ -18,7 +20,7 @@ export class LoginPageComponent implements OnInit {
       return;
     }
     this.gs.setName(name);
-    this.stageFinish.emit('game');
+    this.router.navigate(['play']);
   }
   ngOnInit() {
   }

@@ -3,6 +3,7 @@ import * as moment from 'moment';
 import { environment as env } from '../../../environments/environment';
 import { GameServiceService } from '../../services/game-service.service';
 import { EventEmitter, Output } from '@angular//core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-clicker-page',
@@ -16,7 +17,7 @@ export class ClickerPageComponent implements OnInit {
   interval;
   play = false;
 
-  constructor(private gs: GameServiceService) {
+  constructor(private gs: GameServiceService, private router: Router) {
     this.timer = moment().startOf('day').seconds(this.gameDuration).format('H:mm:ss');
   }
   @Output() stageFinish = new EventEmitter();
@@ -26,7 +27,7 @@ export class ClickerPageComponent implements OnInit {
       if(this.timer === '0:00:00'){
         this.gs.saveScore(this.score);
         clearInterval(this.interval);
-        this.stageFinish.emit('finish');
+        this.router.navigate(['result']);
         return;
       }
       this.timer = moment(this.timer, 'H:mm:ss')
