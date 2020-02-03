@@ -1,10 +1,11 @@
 language: node_js
 node_js:
-- '10'
+  - '10'
 
 before_install:
   - npm i -g @angular/cli
-install: npm install
+install:
+  - npm install
 
 branches:
   only:
@@ -13,5 +14,5 @@ branches:
 deploy:
   provider: heroku
   app: ant-clicker
-  api_key:
-  secure: "be53a080-5554-43ba-b348-a34124b8f46a"
+    api_key:
+      secure: "be53a080-5554-43ba-b348-a34124b8f46a"
