@@ -3,13 +3,13 @@ node_js:
   - '10'
 
 before_install:
-  - npm i -g @angular/cli
+  - npm install -g @angular/cli
 install:
   - npm install
 
 branches:
   only:
-    -master
+    - master
 
 deploy:
   provider: heroku
